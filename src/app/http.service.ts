@@ -8,7 +8,11 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  getBeer() {
+  // getBeer() {
+  //   return this.http.get('https://api.openbrewerydb.org/breweries')
+  // }
+
+  myMethod() {
     return this.http.get('https://api.openbrewerydb.org/breweries')
   }
 }

@@ -13,8 +13,8 @@ export class ListComponent implements OnInit {
   constructor(private _http: HttpService) { }
 
   ngOnInit() {
-    this._http.getBeer().subscribe(data => {
-      this.brews = data
+    this._http.myMethod()._subscribe((data: any) => {
+      this.brews = data.body
       console.log(this.brews)
     })
   }
